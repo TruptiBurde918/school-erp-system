@@ -7,5 +7,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  protected readonly title = signal('my-angular-app');
+title ='School-ERP-System';
+
 }
