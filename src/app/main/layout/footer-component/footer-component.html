@@ -1,0 +1,57 @@
+<footer class="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-800 text-white py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-wrap justify-between gap-8 mb-8">
+
+      <div class="flex-1 min-w-[250px]">
+        <h3 class="text-2xl font-bold mb-4 text-yellow-300">{{companyName}}</h3>
+        <p class="text-gray-300 mb-4">{{companyDescription}}</p>
+        <div class="flex gap-4 text-xl">
+          <a *ngFor="let social of socialLinks" class="hover:text-yellow-300 transition-colors">
+            <i [class]="social.icon"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-1 min-w-[200px]">
+        <h4 class="text-lg font-semibold mb-4 text-yellow-300">Quick Links</h4>
+        <ul class="space-y-2">
+          <li *ngFor="let link of quickLinks">
+            <div class="text-gray-300 hover:text-white hover:pl-2 transition-all">
+              <i [class]="link.icon + ' mr-2'"></i>{{link.name}}
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-1 min-w-[200px]">
+        <h4 class="text-lg font-semibold mb-4 text-yellow-300">Resources</h4>
+        <ul class="space-y-2">
+          <li *ngFor="let resource of resources" class="text-gray-300 hover:text-white hover:pl-2 transition-all cursor-pointer">
+            <i [class]="resource.icon + ' mr-2'"></i>{{resource.name}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-1 min-w-[250px]">
+        <h4 class="text-lg font-semibold mb-4 text-yellow-300">Contact Us</h4>
+        <ul class="space-y-3 text-gray-300">
+          <li *ngFor="let contact of contactInfo" class="flex items-start gap-3">
+            <i [class]="contact.icon + ' mt-1'"></i>
+            <span>{{contact.text}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-purple-700 my-6"></div>
+
+    <div class="flex flex-wrap justify-between items-center gap-4 text-sm text-gray-400">
+      <p><i class="far fa-copyright"></i> {{copyrightYear}} {{copyrightText}}</p>
+      <p class="flex items-center gap-2">
+        Made with
+        <i class="fas fa-heart text-red-500"></i>
+        by {{createdBy}}
+      </p>
+    </div>
+  </div>
+</footer>
